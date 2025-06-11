@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="loader-wrapper">
+      <div class="loader">
+        <div class="loading-logo">
+            Delicious<span>Bites</span>
+        </div>
+        <div class="spinner"></div>
+      </div>
+    </div> 
+ <header class="header">
+        <div class="logo">
+            <a href="#">Delicious<span>Bites</span>
+            </a>
+        </div>
+        <ul class="nav-links menuList">
+            <li><a href="">Home</a></li>
+              <li><a href="">Product</a></li>
+                <li><a href="">Promo</a></li>
+                  <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+
+        </ul>
+        <div class="auth-buttons clkBtn">
+                <button class="btn login-btn">Login</button>
+                <button class="btn signup-btn">Sign Up</button>
+            </div> 
+            <div class="menu-icon">
+                 <i class="fas fa-bars" onclick="ToggleMenu()"></i>
+            </div>
+    </header>   
+ <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Delicious Bites</h1>
+            <p class="hero-description">Experience the finest culinary delights crafted with passion and the freshest ingredients. Our dishes will take your taste buds on an unforgettable journey.</p>
+            <button class="btn hero-btn">Order Now</button>
+        </div>
+</section>
+
+<section class="best-seller">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Best Sellers</h2>
+            <p class="section-subtitle">Customer favorites that keep them coming back for more</p>
+        </div>
+        
+        <div class="dishes-grid">
+            <div class="dish-card">
+                <div class="dish-img-container">
+                    <img src="images/dish_card1.jpg" alt="Grilled Salmon" class="dish-img">
+                </div>
+                <h3 class="dish-name">Grilled Salmon</h3>
+                <p class="dish-desc">Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                <button class="btn dish-btn">Order Now</button>
+            </div>
+            <div class="dish-card">
+                <div class="dish-img-container">
+                    <img src="images/dish_card2.jpg" alt="Truffle Pasta" class="dish-img">
+                </div>
+                <h3 class="dish-name">Truffle Pasta</h3>
+                <p class="dish-desc">Homemade fettuccine with black truffle cream sauce and parmesan</p>
+                <button class="btn dish-btn">Order Now</button>
+            </div>
+            
+            <!-- Dish 3 -->
+            <div class="dish-card">
+                <div class="dish-img-container">
+                    <img src="images/dish_card3.jpg" alt="Gourmet Burger" class="dish-img">
+                </div>
+                <h3 class="dish-name">Gourmet Burger</h3>
+                <p class="dish-desc">Angus beef patty with aged cheddar, caramelized onions, and special sauce</p>
+                <button class="btn dish-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oriental-special">
+    <div class="container">
+        <div class="oriental-content">
+            <div class="oriental-text">
+                <h2 class="section-title">Oriental Taste Special</h2>
+                <h3 class="dish-highlight">Dragon Roll Sushi</h3>
+                <p class="dish-description">Our signature sushi roll with fresh tuna, avocado, cucumber, and special dragon sauce. Handcrafted by our master sushi chef using traditional techniques.</p>
+                <div class="price-tag">$14.99</div>
+                <button class="btn oriental-btn">Order Special</button>
+            </div>
+            <div class="oriental-image">
+                <img src="images/oriental taste.jpg" alt="Dragon Roll Sushi">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-count="123">10+</div>
+                <div class="stat-label">Outlets Worldwide</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="100">09</div>
+                <div class="stat-label">Professional Chefs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="100">50+</div>
+                <div class="stat-label">Delicious Menus</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="subscription-section">
+    <div class="container">
+        <div class="subscription-content">
+            <div class="subscription-text">
+                <h2 class="section-title">Stay Updated</h2>
+                <p class="section-subtitle">Subscribe to our newsletter for exclusive offers, new menu items, and special events</p>
+            </div>
+            <form class="subscription-form" id="subscribeForm">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn subscribe-btn">Subscribe</button>
+                </div>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+</section>
+<div id="subscriptionModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Thank You!</h2>
+    <p>You have successfully subscribed to our newsletter.</p>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-title">Delicious<span>Bites</span></h3>
+                <p class="footer-about">Bringing you the finest culinary experiences since 2010. Our passion for food is matched only by our commitment to quality.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Promotions</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Private Dining</a></li>
+                    <li><a href="#">Food Delivery</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Culinary City</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@deliciousbites.com</li>
+                    <li><i class="fas fa-clock"></i> Open Daily: 10AM - 10PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> DeliciousBites. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Chatbot Toggle Button -->
+<button id="chatbot-toggle-btn">💬</button>
+<div id="chatbot-popup" class="hidden">
+  <div class="chat-header">
+    <h3>DeliciousBites Chatbot</h3>
+    <button id="chatbot-close-btn">&times;</button>
+  </div>
+  <div class="chat-body" id="chat-messages">
+    <div class="message bot-message">Hello! How can I help you today?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Ask a question...">
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
